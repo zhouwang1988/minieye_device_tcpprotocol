@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cictec.middleware.tsinghua.dao.AlarmTypeMapper">
+  <!--1.0 返回结果集 po-->
+  <resultMap id="BaseResultMap" type="com.cictec.middleware.tsinghua.entity.po.AlarmType">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="display" jdbcType="VARCHAR" property="display" />
+    <result column="sort" jdbcType="NUMERIC" property="sort" />
+    <result column="isvalid" jdbcType="CHAR" property="isvalid" />
+  </resultMap>
+  
+  <!--1.1 返回结果集dto-->
+  <resultMap id="tSysDatadictDtoMap" type="com.cictec.middleware.tsinghua.entity.po.AlarmType">
+
+    <id column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="display" jdbcType="VARCHAR" property="display" />
+    <result column="sort" jdbcType="NUMERIC" property="sort" />
+    <result column="isvalid" jdbcType="CHAR" property="isvalid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  
+  
+  
+  <!--1.2 根据条件查询符合条件的数据字典项信息列表  -->
+  <select id="selectTSysDatadictList" parameterType="com.cictec.middleware.tsinghua.entity.po.AlarmType" resultMap="tSysDatadictDtoMap">
+	   select t.*  from t_sys_datadict t 
+	   <where> 1=1
+	   	   <if test="uuid != null and uuid != '' "><![CDATA[ AND t.uuid = #{uuid} ]]></if>
+		   <if test="code != null and code != '' "><![CDATA[ AND t.code like '%${code}%' ]]></if>
+	   </where>
+	   ORDER BY
+			t.sort DESC
+   </select>
+ 
+   
+</mapper>
