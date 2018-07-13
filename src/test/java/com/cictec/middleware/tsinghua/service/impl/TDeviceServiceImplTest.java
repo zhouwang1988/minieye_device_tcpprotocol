@@ -1,13 +1,14 @@
 package com.cictec.middleware.tsinghua.service.impl;
 
-import com.cictec.middleware.tsinghua.entity.po.TDevice;
-import com.cictec.middleware.tsinghua.entity.po.TWarn;
-import com.cictec.middleware.tsinghua.entity.po.TWarnMedia;
-import com.cictec.middleware.tsinghua.service.TDeviceService;
-import com.cictec.middleware.tsinghua.service.TWarnMediaService;
-import com.cictec.middleware.tsinghua.service.TWarnService;
-import com.cictec.middleware.tsinghua.utils.DateUtils;
-import com.cictec.middleware.tsinghua.utils.DownloadUtils;
+import com.cictec.middleware.minieye.entity.po.TDevice;
+import com.cictec.middleware.minieye.entity.po.TWarn;
+import com.cictec.middleware.minieye.entity.po.TWarnMedia;
+import com.cictec.middleware.minieye.service.TDeviceService;
+import com.cictec.middleware.minieye.service.TWarnMediaService;
+import com.cictec.middleware.minieye.service.TWarnService;
+import com.cictec.middleware.minieye.utils.DateUtils;
+import com.cictec.middleware.minieye.utils.DownloadUtils;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

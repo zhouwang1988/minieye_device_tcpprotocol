@@ -225,7 +225,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.cictec.middleware.tsinghua.TsinghuaDeviceTcpprotocolApplication</mainClass>
+                            <mainClass>com.cictec.middleware.tsinghua.MinieyeDeviceTcpprotocolApplication</mainClass>
                         </manifest>
                         <manifestEntries>
                             <Class-Path>config/</Class-Path>
